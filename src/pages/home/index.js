@@ -5,6 +5,17 @@ import { SearchGames } from '../../components/searchGames';
 import { FlatList } from 'react-native-gesture-handler';
 
 const Home = () => {
+    const data = [
+        { id: '1', name: 'Ação ' },
+        { id: '2', name: 'Coriida ' },
+        { id: '3', name: 'RPG ' },
+        { id: '4', name: 'Item 4' },
+        { id: '5', name: 'Item 5' },
+        { id: '6', name: 'Item 6' },
+        { id: '7', name: 'Item 7' },
+        { id: '8', name: 'Item 8' },
+      ];
+    
     return (
         <ScrollView style={styles.containerView}>
             <View style={styles.container}>
@@ -19,7 +30,13 @@ const Home = () => {
                 <SearchGames/>
             </View>
             <View>
-                <FlatList/>
+            <FlatList
+            data={data}
+            horizontal={true}
+            renderItem={({ item }) => <Text style={{color: "#FFF", marginRight: 50}}>{item.name}</Text>}
+            keyExtractor={(item) => item.id.toString()}
+            nestedScrollEnabled // tentando solucionar o erro de virtualizaçao devido ao scrollView
+  />
             </View>
         </ScrollView>
     );
