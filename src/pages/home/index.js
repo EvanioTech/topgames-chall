@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import { SearchGames } from '../../components/searchGames';
+import { FlatList } from 'react-native-gesture-handler';
 
 const Home = () => {
     return (
@@ -16,6 +17,9 @@ const Home = () => {
             </View>
             <View>
                 <SearchGames/>
+            </View>
+            <View>
+                <FlatList/>
             </View>
         </ScrollView>
     );

@@ -1,11 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 
 
 
 const SearchGames = () => {
     return(
+        
         <View style={styles.containerView}>
             <TextInput style={styles.search}>
 
@@ -15,6 +16,7 @@ const SearchGames = () => {
             </TouchableOpacity>
             
         </View>
+
     );
 };
 
